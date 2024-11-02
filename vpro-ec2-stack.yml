@@ -203,9 +203,9 @@
         mode: '0400'
 
     - name: Insert/update Inventory file provision-stack/inventory-vpro
-        blockinfile:
-          path: provision-stack/inventory-vpro
-          block |
+      blockinfile:
+        path: provision-stack/inventory-vpro
+        block |
           web01_ip: {{ web01_out.tagged_instances[ 0 ].private_ip }}
           app01_ip: {{ app01_out.tagged_instances[ 0 ].private_ip }}
           rmq01_ip: {{ rmq01_out.tagged_instances[ 0 ].private_ip }}
