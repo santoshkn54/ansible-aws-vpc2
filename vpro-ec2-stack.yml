@@ -105,8 +105,8 @@
         vpc_subnet_id: "{{privsub1id}}"
       register: app01_out
 
-     - name: Creating memcache mc01
-       ec2:
+    - name: Creating memcache mc01
+      ec2:
         key_name: vprokey
         region: "{{region}}"
         instance_type: t2.micro
@@ -124,9 +124,9 @@
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
         vpc_subnet_id: "{{privsub1id}}"
-       register: mc01_out
-     - name: Creating rabbit rmq01
-       ec2:
+      register: mc01_out
+    - name: Creating rabbit rmq01
+      ec2:
           key_name: vprokey
           region: "{{region}}"
           instance_type: t2.micro
@@ -144,9 +144,9 @@
             Owner: Devops Team
           group_id: "{{vproStackSG_out.group_id}}"
           vpc_subnet_id: "{{privsub1id}}"
-       register: rm01_out
-     - name: Creating mysql db01
-       ec2:
+      register: rm01_out
+    - name: Creating mysql db01
+      ec2:
           key_name: vprokey
           region: "{{region}}"
           instance_type: t2.micro
@@ -164,7 +164,7 @@
             Owner: Devops Team
           group_id: "{{vproStackSG_out.group_id}}"
           vpc_subnet_id: "{{privsub1id}}"
-       register: db01_out
+      register: db01_out
 
-     - debug:
+    - debug:
          var: db01_out
