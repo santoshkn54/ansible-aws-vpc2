@@ -144,7 +144,7 @@
             Owner: Devops Team
           group_id: "{{vproStackSG_out.group_id}}"
           vpc_subnet_id: "{{privsub1id}}"
-      register: rm01_out
+      register: rmq01_out
     - name: Creating mysql db01
       ec2:
           key_name: vprokey
