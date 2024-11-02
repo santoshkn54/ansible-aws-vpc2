@@ -71,7 +71,7 @@
         image: "{{nginx_ami}}"
         wait: yes
         wait_timeout: 300
-        instance_tgas:
+        instance_tags:
           Name: "web01"
           project: Vprofile
           Owner: Devops Team
@@ -92,7 +92,7 @@
         image: "{{tomcat_ami}}"
         wait: yes
         wait_timeout: 300
-        instance_tgas:
+        instance_tags:
             Name: "app01"
             project: Vprofile
             Owner: Devops Team
@@ -113,7 +113,7 @@
         image: "{{memcache_ami}}"
         wait: yes
         wait_timeout: 300
-        instance_tgas:
+        instance_tags:
           Name: "mc01"
           project: Vprofile
           Owner: Devops Team
@@ -133,7 +133,7 @@
           image: "{{rmq_ami}}"
           wait: yes
           wait_timeout: 300
-          instance_tgas:
+          instance_tags:
             Name: "rmq01"
             project: Vprofile
             Owner: Devops Team
@@ -153,7 +153,7 @@
           image: "{{mysql_ami}}"
           wait: yes
           wait_timeout: 300
-          instance_tgas:
+          instance_tags:
             Name: "db01"
             project: Vprofile
             Owner: Devops Team
