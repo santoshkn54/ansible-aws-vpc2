@@ -75,7 +75,7 @@
           Name: "web01"
           project: Vprofile
           Owner: Devops Team
-        exact_count:
+        exact_count: 1
         count_tag:
           Name: "web01"
           Project: Vprofile
@@ -96,7 +96,7 @@
             Name: "app01"
             project: Vprofile
             Owner: Devops Team
-        exact_count:
+        exact_count: 1
         count_tag:
           Name: "app01"
           Project: Vprofile
@@ -117,7 +117,7 @@
           Name: "mc01"
           project: Vprofile
           Owner: Devops Team
-        exact_count:
+        exact_count: 1
         count_tag:
           Name: "mc01"
           Project: Vprofile
@@ -137,7 +137,7 @@
             Name: "rmq01"
             project: Vprofile
             Owner: Devops Team
-          exact_count:
+          exact_count: 1
           count_tag:
             Name: "rmq01"
             Project: Vprofile
@@ -157,7 +157,7 @@
             Name: "db01"
             project: Vprofile
             Owner: Devops Team
-          exact_count:
+          exact_count: 1
           count_tag:
             Name: "db01"
             Project: Vprofile
