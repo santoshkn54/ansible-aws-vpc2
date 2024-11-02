@@ -89,21 +89,21 @@
         key_name: vprokey
         region: "{{region}}"
         instance_type: t2.micro
-          image: "{{tomcat_ami}}"
-          wait: yes
-          wait_timeout: 300
-          instance_tgas:
+        image: "{{tomcat_ami}}"
+        wait: yes
+        wait_timeout: 300
+        instance_tgas:
             Name: "app01"
             project: Vprofile
             Owner: Devops Team
-          exact_count:
-          count_tag:
-            Name: "app01"
-            Project: Vprofile
-            Owner: Devops Team
-          group_id: "{{vproStackSG_out.group_id}}"
-          vpc_subnet_id: "{{privsub1id}}"
-       register: app01_out
+        exact_count:
+        count_tag:
+          Name: "app01"
+          Project: Vprofile
+          Owner: Devops Team
+        group_id: "{{vproStackSG_out.group_id}}"
+        vpc_subnet_id: "{{privsub1id}}"
+      register: app01_out
 
      - name: Creating memcache mc01
        ec2:
