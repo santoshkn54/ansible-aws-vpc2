@@ -44,7 +44,7 @@
        rules:
          - proto: tcp
            from_port: 80
-           tp_port: 80
+           to_port: 80
            group_id: "{{vproELBSG_out.group_id}}"
 
          - proto: tcp
