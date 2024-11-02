@@ -186,4 +186,56 @@
           - protocol: http
             load_balancer_port: 80
             instance_port: 80
+    - name: Insert/update Hosts IP & Name in file provision-stack/group_vars/host_ip
+      blockinfile:
+        path: provision-stack/group_vars/hostip
+        block |
+          web01_ip: {{ web01_out.tagged_instances[0].private_ip}}
+          app01_ip: {{ app01_out.tagged_instances[0].private_ip}}
+          rmq01_ip: {{ rmq01_out.tagged_instances[0].private_ip}}
+          mc01_ip:  {{ mc01_out.tagged_instances[0].private_ip}}
+          db01_ip:  {{ db01_out.tagged_instances[0].private_ip}}
+
+    - name: Copy login key to provision_stack directory
+      copy:
+        src: loginkey_vpro.pem
+        dest: provision-stack/loginkey_vpro.pem
+        mode: '0400'
+
+    - name: Insert/update Inventory file provision-stack/inventory-vpro
+        blockinfile:
+          path: provision-stack/inventory-vpro
+          block |
+          web01_ip: {{ web01_out.tagged_instances[ 0 ].private_ip }}
+          app01_ip: {{ app01_out.tagged_instances[ 0 ].private_ip }}
+          rmq01_ip: {{ rmq01_out.tagged_instances[ 0 ].private_ip }}
+          mc01_ip: {{ mc01_out.tagged_instances[ 0 ].private_ip }}
+          db01_ip: {{ db01_out.tagged_instances[ 0 ].private_ip }}
+          cntl ansible_host=127.0.0.1 ansible_connection=local
+
+          [websrvgrp]
+          web01
+
+          [appsrvgrp]
+          app01
+
+          [rmqsrvgrp]
+          rmq01
+
+          [dbsrvgrp]
+          db01
+
+          [control]
+          cntl
+
+          [stack_inst:children]
+          websrvgrp
+          appsrvgrp
+          rmqsrvgrp
+          mcsrvgrp
+          dbsrvgrp
+
+          [stack_inst:vars]
+          ansible_user=ubuntu
+          ansible_ssh_private_key_file=loginkey_vpro.pem
 
