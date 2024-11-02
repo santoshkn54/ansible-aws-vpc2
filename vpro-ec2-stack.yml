@@ -93,9 +93,9 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-            Name: "app01"
-            project: Vprofile
-            Owner: Devops Team
+          Name: "app01"
+          project: Vprofile
+          Owner: Devops Team
         exact_count: 1
         count_tag:
           Name: "app01"
