@@ -11,3 +11,6 @@ NATGWid: nat-0312b91fea27be50d
 privRTid: rtb-0a25e9a094bbc664e
 region: us-east-1
 BastionSGid:
+# BEGIN ANSIBLE MANAGED BLOCK
+BastionSGid: sg-04b2fb0b378fa107c
+# END ANSIBLE MANAGED BLOCK
