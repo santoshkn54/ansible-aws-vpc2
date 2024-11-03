@@ -3,21 +3,21 @@
   hosts: rmqsrvgrp
   gather_facts: no
   tasks:
-    - name: Add RabbitMQ repository
-      apt_repository:
-          repo: ppa:rabbitmq/rabbitmq-server
-          state: present
+    - name: Install Erlang Repository Package
+      command: apt-get -y install socat logrotate init-system-helpers adduser
+    - name: wget
+      command: apt-get -y install wget
+    - name: wget
+      command: cd /opt
+    - name: download package
+      command: wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.0.3/rabbitmq-server_4.0.3-1_all.deb
 
-    - name: Update apt repository again
-      apt:
-        update_cache: yes
+
+
+
     - name: Install Rabbit MQ
-      apt:
-        name: rabbitmq-server
-        state: present
-        update_cache: yes
-      tags:
-        - package
+      command: dpkg -i rabbitmq-server_4.0.3-1_all.deb
+
 
 
     - name: Start & Enable RMQ
