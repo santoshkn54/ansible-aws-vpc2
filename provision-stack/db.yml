@@ -18,10 +18,7 @@
       ignore_errors: yes
       tags:
        - package
-    - name: Install Python 2.x
-      apt:
-        name: python2
-        state: present
+
 
     - name: Install Python 3.x
       apt:
