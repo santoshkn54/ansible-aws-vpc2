@@ -20,8 +20,8 @@
         url: https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-release.gpg
         state: present
 
-   - name: Add RabbitMQ repository
-     apt_repository:
+    - name: Add RabbitMQ repository
+      apt_repository:
         repo: 'deb https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/deb/ubuntu jammy main'
         state: present
 
