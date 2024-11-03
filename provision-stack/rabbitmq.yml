@@ -8,7 +8,8 @@
     - name: wget
       command: apt-get -y install wget
     - name: change directory
-      chdir: /tmp
+      args:
+       chdir: /tmp
     - name: download package
       command: wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.0.3/rabbitmq-server_4.0.3-1_all.deb
 
