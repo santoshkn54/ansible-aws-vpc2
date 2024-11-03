@@ -17,5 +17,8 @@
 - name: setup rabbitmq service
   import_playbook: rabbitmq.yml
 
+- name: setup tomcat app server
+  import_playbook: appserver.yml
+
 - name: setup nginx webserver
   import_playbook: web.yml
