@@ -25,12 +25,10 @@
       tags:
         - package
 
-    - name: Add an Apt signing key, uses whichever key is at the URL
+    - name: Add RabbitMQ signing key
       apt_key:
-        url: https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc
-        state: present
-      tags:
-        - package
+          url: https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-release.gpg
+          state: present
 
     - name: Add RabbitMQ repository
       apt_repository:
