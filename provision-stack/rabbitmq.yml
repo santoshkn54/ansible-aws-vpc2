@@ -17,13 +17,13 @@
 
     - name: Add RabbitMQ signing key
       apt_key:
-       url: https://deb.rabbitmq.com/rabbitmq-release.gpg
-       state: present
+        url: https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-release.gpg
+        state: present
 
-    - name: Add RabbitMQ repository
-      apt_repository:
-          repo: 'deb https://dl.bintray.com/rabbitmq/debian buster main'
-          state: present
+   - name: Add RabbitMQ repository
+     apt_repository:
+        repo: 'deb https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/deb/ubuntu jammy main'
+        state: present
 
     - name: Update apt repository again
       apt:
