@@ -10,6 +10,10 @@
       apt:
         name: mysql-server
         state: present
+    - name: installing python3
+      apt:
+        name: python3-mysqldb
+        state: present
 
     - name: creating mysql user
       mysql_user:
