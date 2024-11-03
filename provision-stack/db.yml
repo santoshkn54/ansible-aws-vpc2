@@ -3,21 +3,14 @@
   hosts: dbsrvgrp
   gather_facts: no
   tasks:
-    - name: Installing mysql service and dependencies
-      package:
-        name: "{{item}}"
-        state: present
+    - name: update apt repository
+      apt:
         update_cache: yes
-        cache_valid_time: 86400
-      loop:
-        - mysql-server
-        - mysql-client
-        - python-mysqldb
-        - python3-mysqldb
-        - libmysqlclient-dev
-      ignore_errors: yes
-      tags:
-        - package
+    - name: Install MySQL server
+        apt:
+          name: mysql-server
+          state: present
+
     - name: creating mysql user
       mysql_user:
         name: "{{dbuser}}"
