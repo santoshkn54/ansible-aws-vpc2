@@ -3,14 +3,6 @@
   hosts: rmqsrvgrp
   gather_facts: no
   tasks:
-    - name: Install necessary packages
-      apt:
-        name:
-            - curl
-            - gnupg
-            - apt-transport-https
-        state: present
-
     - name: Add RabbitMQ signing key
       apt_key:
         url: https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-release.gpg
