@@ -1,0 +1,291 @@
+2024-11-03 03:44:04,938 p=989 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with yaml plugin: We were unable to read either as JSON nor YAML, these
+are the errors we got from each: JSON: Expecting value: line 1 column 1 (char
+0)  Syntax Error while loading YAML.   could not find expected ':'  The error
+appears to be in '/root/ansible-aws-vpc2/provision-stack/inventory-vpro': line
+9, column 1, but may be elsewhere in the file depending on the exact syntax
+problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2024-11-03 03:44:04,939 p=989 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with ini plugin: Invalid host pattern 'web01_ip:' supplied, ending in ':'
+is not allowed, this character is reserved to provide a port.
+
+2024-11-03 03:44:04,939 p=989 u=root n=ansible | [WARNING]: Unable to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro as an inventory source
+
+2024-11-03 03:44:04,939 p=989 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-03 03:44:04,949 p=989 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2024-11-03 03:44:05,340 p=989 u=root n=ansible | PLAY [Generate artifact, copy artifact & sql file to files directory] **********
+2024-11-03 03:44:05,359 p=989 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-03 03:44:07,087 p=989 u=root n=ansible | ok: [localhost]
+2024-11-03 03:44:07,097 p=989 u=root n=ansible | TASK [Install jdk, maven, git] *************************************************
+2024-11-03 03:44:16,915 p=989 u=root n=ansible | ok: [localhost] => (item=git)
+2024-11-03 03:44:53,044 p=989 u=root n=ansible | changed: [localhost] => (item=openjdk-8-jdk)
+2024-11-03 03:45:06,097 p=989 u=root n=ansible | changed: [localhost] => (item=maven)
+2024-11-03 03:45:06,116 p=989 u=root n=ansible | TASK [clone source code from gitbub] *******************************************
+2024-11-03 03:45:10,577 p=989 u=root n=ansible | changed: [localhost]
+2024-11-03 03:45:10,585 p=989 u=root n=ansible | TASK [mvn install command to build artifact] ***********************************
+2024-11-03 03:45:46,269 p=989 u=root n=ansible | changed: [localhost]
+2024-11-03 03:45:46,300 p=989 u=root n=ansible | TASK [copy artifacts to files directory] ***************************************
+2024-11-03 03:45:47,611 p=989 u=root n=ansible | changed: [localhost] => (item=/root/ansible-aws-vpc2/provision-stack/Vprofile-repo/target/vprofile-v2.war)
+2024-11-03 03:45:47,619 p=989 u=root n=ansible | TASK [Copy sql file to files directory] ****************************************
+2024-11-03 03:45:47,972 p=989 u=root n=ansible | changed: [localhost]
+2024-11-03 03:45:47,985 p=989 u=root n=ansible | PLAY RECAP *********************************************************************
+2024-11-03 03:45:47,985 p=989 u=root n=ansible | localhost                  : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 03:54:08,951 p=6402 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with yaml plugin: We were unable to read either as JSON nor YAML, these
+are the errors we got from each: JSON: Expecting value: line 1 column 1 (char
+0)  Syntax Error while loading YAML.   could not find expected ':'  The error
+appears to be in '/root/ansible-aws-vpc2/provision-stack/inventory-vpro': line
+9, column 1, but may be elsewhere in the file depending on the exact syntax
+problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2024-11-03 03:54:08,952 p=6402 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with ini plugin: Invalid host pattern 'web01_ip:' supplied, ending in ':'
+is not allowed, this character is reserved to provide a port.
+
+2024-11-03 03:54:08,952 p=6402 u=root n=ansible | [WARNING]: Unable to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro as an inventory source
+
+2024-11-03 03:54:08,952 p=6402 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-03 03:54:08,962 p=6402 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2024-11-03 03:54:09,405 p=6402 u=root n=ansible | PLAY [set host to ip mapping in /etc/hosts file of all the instances in the stack] ***
+2024-11-03 03:54:09,406 p=6402 u=root n=ansible | skipping: no hosts matched
+2024-11-03 03:54:09,406 p=6402 u=root n=ansible | PLAY RECAP *********************************************************************
+2024-11-03 04:40:22,767 p=6471 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with yaml plugin: We were unable to read either as JSON nor YAML, these
+are the errors we got from each: JSON: Expecting value: line 1 column 1 (char
+0)  Syntax Error while loading YAML.   could not find expected ':'  The error
+appears to be in '/root/ansible-aws-vpc2/provision-stack/inventory-vpro': line
+9, column 1, but may be elsewhere in the file depending on the exact syntax
+problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2024-11-03 04:40:22,767 p=6471 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with ini plugin: Invalid host pattern 'web01_ip:' supplied, ending in ':'
+is not allowed, this character is reserved to provide a port.
+
+2024-11-03 04:40:22,767 p=6471 u=root n=ansible | [WARNING]: Unable to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro as an inventory source
+
+2024-11-03 04:40:22,767 p=6471 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-03 04:40:22,770 p=6471 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2024-11-03 04:40:22,894 p=6471 u=root n=ansible | PLAY [set host to ip mapping in /etc/hosts file of all the instances in the stack] ***
+2024-11-03 04:40:22,894 p=6471 u=root n=ansible | skipping: no hosts matched
+2024-11-03 04:40:22,895 p=6471 u=root n=ansible | PLAY RECAP *********************************************************************
+2024-11-03 04:45:15,205 p=6857 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON nor YAML, these are the errors we got from each: JSON: Expecting
+value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not find expected ':'  The error appears to be in '/root/ansible-aws-vpc2/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2024-11-03 04:45:15,206 p=6857 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:' supplied, ending in ':' is not allowed, this character is reserved to
+provide a port.
+
+2024-11-03 04:45:15,206 p=6857 u=root n=ansible | [WARNING]: Unable to parse /root/ansible-aws-vpc2/provision-stack/inventory-vpro as an inventory source
+
+2024-11-03 04:45:15,206 p=6857 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-03 04:45:15,209 p=6857 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-11-03 04:45:15,333 p=6857 u=root n=ansible | PLAY [set host to ip mapping in /etc/hosts file of all the instances in the stack] *******************************************************************************************************************************
+2024-11-03 04:45:15,333 p=6857 u=root n=ansible | skipping: no hosts matched
+2024-11-03 04:45:15,334 p=6857 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-03 04:53:34,815 p=7253 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with yaml plugin: YAML inventory has invalid structure, it should be a
+dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-11-03 04:53:34,816 p=7253 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with ini plugin: /root/ansible-aws-vpc2/provision-stack/inventory-vpro:28:
+Section [stack_inst:children] includes undefined group: mcsrvgrp
+
+2024-11-03 04:53:34,816 p=7253 u=root n=ansible | [WARNING]: Unable to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro as an inventory source
+
+2024-11-03 04:53:34,816 p=7253 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-03 04:53:34,946 p=7253 u=root n=ansible | PLAY [set host to ip mapping in /etc/hosts file of all the instances in the stack] ***
+2024-11-03 04:53:34,955 p=7253 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-03 04:53:36,047 p=7253 u=root n=ansible | fatal: [web01_ip=172.20.4.204]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname web01_ip=172.20.4.204: Name or service not known", "unreachable": true}
+2024-11-03 04:53:36,061 p=7253 u=root n=ansible | fatal: [app01_ip=172.20.4.63]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname app01_ip=172.20.4.63: Name or service not known", "unreachable": true}
+2024-11-03 04:53:36,098 p=7253 u=root n=ansible | fatal: [rmq01_ip=172.20.4.252]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rmq01_ip=172.20.4.252: Name or service not known", "unreachable": true}
+2024-11-03 04:53:36,112 p=7253 u=root n=ansible | fatal: [mc01_ip=172.20.4.139]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mc01_ip=172.20.4.139: Name or service not known", "unreachable": true}
+2024-11-03 04:53:36,118 p=7253 u=root n=ansible | fatal: [db01_ip=172.20.4.101]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname db01_ip=172.20.4.101: Name or service not known", "unreachable": true}
+2024-11-03 04:53:37,242 p=7253 u=root n=ansible | ok: [cntl]
+2024-11-03 04:53:37,255 p=7253 u=root n=ansible | TASK [Import vpc setup variable] ***********************************************
+2024-11-03 04:53:37,268 p=7253 u=root n=ansible | ok: [cntl]
+2024-11-03 04:53:37,275 p=7253 u=root n=ansible | TASK [update hosts file for all the hosts] *************************************
+2024-11-03 04:53:37,590 p=7253 u=root n=ansible | changed: [cntl]
+2024-11-03 04:53:37,603 p=7253 u=root n=ansible | PLAY RECAP *********************************************************************
+2024-11-03 04:53:37,604 p=7253 u=root n=ansible | app01_ip=172.20.4.63       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 04:53:37,604 p=7253 u=root n=ansible | cntl                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 04:53:37,604 p=7253 u=root n=ansible | db01_ip=172.20.4.101       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 04:53:37,604 p=7253 u=root n=ansible | mc01_ip=172.20.4.139       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 04:53:37,604 p=7253 u=root n=ansible | rmq01_ip=172.20.4.252      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 04:53:37,604 p=7253 u=root n=ansible | web01_ip=172.20.4.204      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:08:21,204 p=7815 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with yaml plugin: YAML inventory has invalid structure, it should be a
+dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-11-03 05:08:21,205 p=7815 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with ini plugin: /root/ansible-aws-vpc2/provision-stack/inventory-vpro:28:
+Section [stack_inst:children] includes undefined group: mcsrvgrp
+
+2024-11-03 05:08:21,205 p=7815 u=root n=ansible | [WARNING]: Unable to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro as an inventory source
+
+2024-11-03 05:08:21,205 p=7815 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-03 05:08:21,334 p=7815 u=root n=ansible | PLAY [set host to ip mapping in /etc/hosts file of all the instances in the stack] ***
+2024-11-03 05:08:21,343 p=7815 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-03 05:08:22,493 p=7815 u=root n=ansible | fatal: [mc01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mc01: Temporary failure in name resolution", "unreachable": true}
+2024-11-03 05:08:22,868 p=7815 u=root n=ansible | fatal: [web01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.204: Permission denied (publickey).", "unreachable": true}
+2024-11-03 05:08:22,884 p=7815 u=root n=ansible | fatal: [rmq01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.252: Permission denied (publickey).", "unreachable": true}
+2024-11-03 05:08:22,908 p=7815 u=root n=ansible | fatal: [app01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.63: Permission denied (publickey).", "unreachable": true}
+2024-11-03 05:08:22,980 p=7815 u=root n=ansible | fatal: [db01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.101: Permission denied (publickey).", "unreachable": true}
+2024-11-03 05:08:23,569 p=7815 u=root n=ansible | ok: [cntl]
+2024-11-03 05:08:23,583 p=7815 u=root n=ansible | TASK [Import vpc setup variable] ***********************************************
+2024-11-03 05:08:23,597 p=7815 u=root n=ansible | ok: [cntl]
+2024-11-03 05:08:23,605 p=7815 u=root n=ansible | TASK [update hosts file for all the hosts] *************************************
+2024-11-03 05:08:23,922 p=7815 u=root n=ansible | changed: [cntl]
+2024-11-03 05:08:23,935 p=7815 u=root n=ansible | PLAY RECAP *********************************************************************
+2024-11-03 05:08:23,936 p=7815 u=root n=ansible | app01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:08:23,936 p=7815 u=root n=ansible | cntl                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:08:23,936 p=7815 u=root n=ansible | db01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:08:23,936 p=7815 u=root n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:08:23,936 p=7815 u=root n=ansible | rmq01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:08:23,936 p=7815 u=root n=ansible | web01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:15:55,109 p=8699 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with yaml plugin: YAML inventory has invalid structure, it should be a
+dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-11-03 05:15:55,110 p=8699 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with ini plugin: /root/ansible-aws-vpc2/provision-stack/inventory-vpro:28:
+Section [stack_inst:children] includes undefined group: mcsrvgrp
+
+2024-11-03 05:15:55,110 p=8699 u=root n=ansible | [WARNING]: Unable to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro as an inventory source
+
+2024-11-03 05:15:55,110 p=8699 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-03 05:15:55,239 p=8699 u=root n=ansible | PLAY [set host to ip mapping in /etc/hosts file of all the instances in the stack] ***
+2024-11-03 05:15:55,247 p=8699 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-03 05:15:56,699 p=8699 u=root n=ansible | fatal: [mc01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@mc01: Permission denied (publickey).", "unreachable": true}
+2024-11-03 05:15:56,759 p=8699 u=root n=ansible | fatal: [rmq01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.252: Permission denied (publickey).", "unreachable": true}
+2024-11-03 05:15:56,779 p=8699 u=root n=ansible | fatal: [app01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.63: Permission denied (publickey).", "unreachable": true}
+2024-11-03 05:15:56,823 p=8699 u=root n=ansible | fatal: [web01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.204: Permission denied (publickey).", "unreachable": true}
+2024-11-03 05:15:56,905 p=8699 u=root n=ansible | fatal: [db01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@172.20.4.101: Permission denied (publickey).", "unreachable": true}
+2024-11-03 05:15:57,731 p=8699 u=root n=ansible | ok: [cntl]
+2024-11-03 05:15:57,746 p=8699 u=root n=ansible | TASK [Import vpc setup variable] ***********************************************
+2024-11-03 05:15:57,760 p=8699 u=root n=ansible | ok: [cntl]
+2024-11-03 05:15:57,768 p=8699 u=root n=ansible | TASK [update hosts file for all the hosts] *************************************
+2024-11-03 05:15:58,085 p=8699 u=root n=ansible | ok: [cntl]
+2024-11-03 05:15:58,098 p=8699 u=root n=ansible | PLAY RECAP *********************************************************************
+2024-11-03 05:15:58,099 p=8699 u=root n=ansible | app01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:15:58,099 p=8699 u=root n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:15:58,099 p=8699 u=root n=ansible | db01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:15:58,099 p=8699 u=root n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:15:58,099 p=8699 u=root n=ansible | rmq01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:15:58,100 p=8699 u=root n=ansible | web01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:22:04,077 p=9617 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with yaml plugin: YAML inventory has invalid structure, it should be a
+dictionary, got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2024-11-03 05:22:04,077 p=9617 u=root n=ansible | [WARNING]:  * Failed to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro with ini plugin: /root/ansible-aws-vpc2/provision-stack/inventory-vpro:28:
+Section [stack_inst:children] includes undefined group: mcsrvgrp
+
+2024-11-03 05:22:04,078 p=9617 u=root n=ansible | [WARNING]: Unable to parse /root/ansible-aws-vpc2/provision-stack/inventory-
+vpro as an inventory source
+
+2024-11-03 05:22:04,078 p=9617 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-03 05:22:04,209 p=9617 u=root n=ansible | PLAY [set host to ip mapping in /etc/hosts file of all the instances in the stack] ***
+2024-11-03 05:22:04,218 p=9617 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-03 05:22:06,741 p=9617 u=root n=ansible | ok: [web01]
+2024-11-03 05:22:06,803 p=9617 u=root n=ansible | ok: [rmq01]
+2024-11-03 05:22:06,817 p=9617 u=root n=ansible | ok: [db01]
+2024-11-03 05:22:07,574 p=9617 u=root n=ansible | ok: [cntl]
+2024-11-03 05:22:07,666 p=9617 u=root n=ansible | ok: [app01]
+2024-11-03 05:22:50,386 p=9617 u=root n=ansible | fatal: [mc01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host mc01 port 22: Connection timed out", "unreachable": true}
+2024-11-03 05:22:50,400 p=9617 u=root n=ansible | TASK [Import vpc setup variable] ***********************************************
+2024-11-03 05:22:50,443 p=9617 u=root n=ansible | ok: [web01]
+2024-11-03 05:22:50,463 p=9617 u=root n=ansible | ok: [app01]
+2024-11-03 05:22:50,484 p=9617 u=root n=ansible | ok: [rmq01]
+2024-11-03 05:22:50,484 p=9617 u=root n=ansible | ok: [db01]
+2024-11-03 05:22:50,489 p=9617 u=root n=ansible | ok: [cntl]
+2024-11-03 05:22:50,496 p=9617 u=root n=ansible | TASK [update hosts file for all the hosts] *************************************
+2024-11-03 05:22:51,163 p=9617 u=root n=ansible | changed: [cntl]
+2024-11-03 05:22:51,196 p=9617 u=root n=ansible | changed: [app01]
+2024-11-03 05:22:51,205 p=9617 u=root n=ansible | changed: [db01]
+2024-11-03 05:22:51,211 p=9617 u=root n=ansible | changed: [web01]
+2024-11-03 05:22:51,214 p=9617 u=root n=ansible | changed: [rmq01]
+2024-11-03 05:22:51,227 p=9617 u=root n=ansible | PLAY RECAP *********************************************************************
+2024-11-03 05:22:51,228 p=9617 u=root n=ansible | app01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:22:51,228 p=9617 u=root n=ansible | cntl                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:22:51,228 p=9617 u=root n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:22:51,228 p=9617 u=root n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:22:51,228 p=9617 u=root n=ansible | rmq01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:22:51,228 p=9617 u=root n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:34:40,744 p=10276 u=root n=ansible | PLAY [set host to ip mapping in /etc/hosts file of all the instances in the stack] ***
+2024-11-03 05:34:40,751 p=10276 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-03 05:34:42,048 p=10276 u=root n=ansible | ok: [cntl]
+2024-11-03 05:34:43,188 p=10276 u=root n=ansible | ok: [web01]
+2024-11-03 05:34:43,230 p=10276 u=root n=ansible | ok: [rmq01]
+2024-11-03 05:34:43,726 p=10276 u=root n=ansible | ok: [app01]
+2024-11-03 05:34:46,787 p=10276 u=root n=ansible | ok: [db01]
+2024-11-03 05:35:26,942 p=10276 u=root n=ansible | fatal: [mc01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host mc01 port 22: Connection timed out", "unreachable": true}
+2024-11-03 05:35:26,955 p=10276 u=root n=ansible | TASK [Import vpc setup variable] ***********************************************
+2024-11-03 05:35:27,001 p=10276 u=root n=ansible | ok: [cntl]
+2024-11-03 05:35:27,019 p=10276 u=root n=ansible | ok: [web01]
+2024-11-03 05:35:27,036 p=10276 u=root n=ansible | ok: [app01]
+2024-11-03 05:35:27,040 p=10276 u=root n=ansible | ok: [rmq01]
+2024-11-03 05:35:27,046 p=10276 u=root n=ansible | ok: [db01]
+2024-11-03 05:35:27,053 p=10276 u=root n=ansible | TASK [update hosts file for all the hosts] *************************************
+2024-11-03 05:35:27,698 p=10276 u=root n=ansible | changed: [cntl]
+2024-11-03 05:35:27,740 p=10276 u=root n=ansible | changed: [rmq01]
+2024-11-03 05:35:27,755 p=10276 u=root n=ansible | changed: [db01]
+2024-11-03 05:35:27,758 p=10276 u=root n=ansible | changed: [web01]
+2024-11-03 05:35:27,758 p=10276 u=root n=ansible | changed: [app01]
+2024-11-03 05:35:27,773 p=10276 u=root n=ansible | PLAY RECAP *********************************************************************
+2024-11-03 05:35:27,773 p=10276 u=root n=ansible | app01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:35:27,774 p=10276 u=root n=ansible | cntl                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:35:27,774 p=10276 u=root n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:35:27,774 p=10276 u=root n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:35:27,774 p=10276 u=root n=ansible | rmq01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:35:27,774 p=10276 u=root n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:44:41,458 p=10901 u=root n=ansible | PLAY [set host to ip mapping in /etc/hosts file of all the instances in the stack] ***
+2024-11-03 05:44:41,466 p=10901 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-03 05:44:42,940 p=10901 u=root n=ansible | ok: [cntl]
+2024-11-03 05:44:43,152 p=10901 u=root n=ansible | ok: [web01]
+2024-11-03 05:44:43,156 p=10901 u=root n=ansible | ok: [app01]
+2024-11-03 05:44:43,328 p=10901 u=root n=ansible | ok: [mc01]
+2024-11-03 05:44:44,177 p=10901 u=root n=ansible | ok: [rmq01]
+2024-11-03 05:44:44,437 p=10901 u=root n=ansible | ok: [db01]
+2024-11-03 05:44:44,447 p=10901 u=root n=ansible | TASK [Import vpc setup variable] ***********************************************
+2024-11-03 05:44:44,489 p=10901 u=root n=ansible | ok: [cntl]
+2024-11-03 05:44:44,511 p=10901 u=root n=ansible | ok: [web01]
+2024-11-03 05:44:44,532 p=10901 u=root n=ansible | ok: [app01]
+2024-11-03 05:44:44,549 p=10901 u=root n=ansible | ok: [rmq01]
+2024-11-03 05:44:44,550 p=10901 u=root n=ansible | ok: [mc01]
+2024-11-03 05:44:44,556 p=10901 u=root n=ansible | ok: [db01]
+2024-11-03 05:44:44,564 p=10901 u=root n=ansible | TASK [update hosts file for all the hosts] *************************************
+2024-11-03 05:44:45,301 p=10901 u=root n=ansible | ok: [app01]
+2024-11-03 05:44:45,304 p=10901 u=root n=ansible | ok: [rmq01]
+2024-11-03 05:44:45,307 p=10901 u=root n=ansible | changed: [mc01]
+2024-11-03 05:44:45,309 p=10901 u=root n=ansible | ok: [web01]
+2024-11-03 05:44:45,310 p=10901 u=root n=ansible | ok: [cntl]
+2024-11-03 05:44:45,593 p=10901 u=root n=ansible | ok: [db01]
+2024-11-03 05:44:45,607 p=10901 u=root n=ansible | PLAY RECAP *********************************************************************
+2024-11-03 05:44:45,607 p=10901 u=root n=ansible | app01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:44:45,607 p=10901 u=root n=ansible | cntl                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:44:45,608 p=10901 u=root n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:44:45,608 p=10901 u=root n=ansible | mc01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:44:45,608 p=10901 u=root n=ansible | rmq01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-03 05:44:45,608 p=10901 u=root n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
