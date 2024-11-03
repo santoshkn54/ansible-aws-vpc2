@@ -3,23 +3,21 @@
   hosts: dbsrvgrp
   gather_facts: no
   tasks:
-    - name: Install necessary packages for pip
-      apt:
-        name:
-            - python3-pip
-            - python2-pip
-            - python3-dev
-            - python2-dev
-            - libmysqlclient-dev
-        state: present
-
-
-    - name: Install pip for Python 2.x if not installed
-      command: python2 /tmp/get-pip.py
-      args:
-        warn: false
-      when: ansible_facts['pkg_mgr'] == 'apt'
-
+    - name: Installing Mysql Service and dependencies
+        package:
+          name: "{{item}}"
+          state: present
+          update_cache: yes
+          cache_valid_time: 86400
+        loop:
+          - mysql-server
+          - mysql-client
+          - python-mysqldb
+          - python3-mysqldb
+          - libmysqlclient-dev
+        ignore_errors: yes
+        tags:
+          - package
     - name: Download get-pip.py for Python 2.x
       get_url:
         url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
