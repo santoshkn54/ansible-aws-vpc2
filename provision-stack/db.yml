@@ -24,7 +24,19 @@
         name: PyMySQL
         state: present
         executable: pip3
+    - name: Download get-pip.py for Python 2.x
+      get_url:
+        url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
+        dest: /tmp/get-pip.py
 
+    - name: Install pip for Python 2.x
+      command: python2 /tmp/get-pip.py
+
+    - name: Install MySQL client for Python 2.x
+      pip:
+       name: mysqlclient
+       state: present
+       executable: pip2
     - name: creating mysql user
       mysql_user:
         name: "{{dbuser}}"
