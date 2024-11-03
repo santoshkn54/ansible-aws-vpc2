@@ -3,30 +3,16 @@
   hosts: dbsrvgrp
   gather_facts: no
   tasks:
-    - name: Installing Mysql Service and dependencies
-      package:
-          name: "{{item}}"
-          state: present
-          update_cache: yes
-          cache_valid_time: 86400
-      loop:
-          - mysql-server
-          - mysql-client
-          - python-mysqldb
-          - python3-mysqldb
-          - libmysqlclient-dev
-      ignore_errors: yes
-      tags:
-        - package
-    - name: Install pip for Python 2.x if python2-pip is not found
-      block:
-        - name: Download get-pip.py for Python 2.x
-          get_url:
-            url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
-            dest: /tmp/get-pip.py
+    - name: Install MySQL server
+      apt:
+        name: mysql-server
+        state: present
 
-        - name: Install pip for Python 2.x
-          command: python2 /tmp/get-pip.py
+    - name: Ensure MySQL is started and enabled
+      service:
+        name: mysql
+        state: started
+        enabled: yes
 
 
 
