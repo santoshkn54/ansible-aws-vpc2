@@ -220,6 +220,10 @@
           [appsrvgrp]
           app01
 
+          [mcsrvgrp]
+          mc01
+
+
           [rmqsrvgrp]
           rmq01
 
