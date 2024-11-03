@@ -28,8 +28,8 @@
         - Restart memcached
       tags:
         - conf
-handlers:
-  - name: Restart memcached
-    service:
-      name: memcached
-      state: restarted
+  handlers:
+   - name: Restart memcached
+     service:
+       name: memcached
+       state: restarted

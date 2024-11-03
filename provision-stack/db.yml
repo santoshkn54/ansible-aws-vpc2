@@ -39,8 +39,8 @@
         - Restart mysql
       tags:
         - conf
-handlers:
-  - name: Restart mysql
-    service:
+  handlers:
+   - name: Restart mysql
+     service:
       name: mysql
       state: restarted
