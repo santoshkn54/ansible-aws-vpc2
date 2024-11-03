@@ -162,8 +162,8 @@
           Name: "db01"
           Project: Vprofile
           Owner: Devops Team
-          group_id: "{{vproStackSG_out.group_id}}"
-          vpc_subnet_id: "{{privsub1id}}"
+        group_id: "{{vproStackSG_out.group_id}}"
+        vpc_subnet_id: "{{privsub1id}}"
       register: db01_out
 
     - debug:
