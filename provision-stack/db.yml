@@ -19,6 +19,11 @@
       apt:
         name: python3-pip
         state: present
+    - name: Install MySQL client for Python 3.x
+      pip:
+        name: PyMySQL
+        state: present
+        executable: pip3
 
     - name: creating mysql user
       mysql_user:
