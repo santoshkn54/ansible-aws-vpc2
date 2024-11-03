@@ -12,7 +12,7 @@
         state: present
     - name: installing python3
       apt:
-        name: python3-mysqldb
+        name: python2
         state: present
 
     - name: creating mysql user
