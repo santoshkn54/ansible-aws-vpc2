@@ -1,39 +1,31 @@
 ---
-- name: setup mysql with accounts db and remote login
+- name: Setup Mysql with accounts db and remote login
   hosts: dbsrvgrp
   gather_facts: no
   tasks:
     - name: Installing Mysql Service and dependencies
       package:
-          name: "{{item}}"
-          state: present
-          update_cache: yes
-          cache_valid_time: 86400
+        name: "{{item}}"
+        state: present
+        update_cache: yes
+        cache_valid_time: 86400
       loop:
-          - mysql-server
-          - mysql-client
-          - python-mysqldb
-          - python3-mysqldb
-          - libmysqlclient-dev
+        - mysql-server
+        - mysql-client
+        - python-mysqldb
+        - python3-mysqldb
+        - libmysqlclient-dev
       ignore_errors: yes
       tags:
         - package
-    - name: Install python3-mysqldb package
-      apt:
-        name: python3-mysqldb
-        state: present
-    - name: Install MySQL server
-      apt:
-        name: mysql-server
-        state: present
 
-    - name: Ensure MySQL is started and enabled
+    - name: Start and enable mysql service
       service:
         name: mysql
         state: started
         enabled: yes
-
-
+      tags:
+        - svc
 
     - name: creating mysql user
       mysql_user:
@@ -42,10 +34,13 @@
         priv: '*.*:ALL'
         host: '%'
         state: present
-    - name: creating acounts db
+
+
+    - name: Creating accounts DB
       mysql_db:
         name: "{{dbname}}"
         state: present
+
     - name: Enable remote login to mysql svc
       lineinfile:
         path: /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -56,8 +51,9 @@
         - Restart mysql
       tags:
         - conf
+
   handlers:
-   - name: Restart mysql
-     service:
-      name: mysql
-      state: restarted
+    - name: Restart mysql
+      service:
+        name: mysql
+        state: restarted
