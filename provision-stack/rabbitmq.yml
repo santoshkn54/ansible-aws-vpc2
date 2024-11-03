@@ -3,15 +3,15 @@
   hosts: rmqsrvgrp
   gather_facts: no
   tasks:
-    - name: Add RabbitMQ signing key
+    - name: Add RabbitMQ GPG Key
       apt_key:
-          url: https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
-          state: present
+        url: "https://www.rabbitmq.com/rabbitmq-release-signing-key.asc"
+        state: present
 
-    - name: Add RabbitMQ repository
+    - name: Add RabbitMQ APT Repository
       apt_repository:
-          repo: 'deb https://dl.bintray.com/rabbitmq/debian buster main'
-          state: present
+        repo: deb https://dl.bintray.com/rabbitmq/debian {{ ansible_distribution_release }} main
+        state: present
 
     - name: Update apt repository again
       apt:
