@@ -8,7 +8,7 @@
           repo: ppa:rabbitmq/rabbitmq-server
           state: present
 
-   - name: Update apt repository again
+    - name: Update apt repository again
       apt:
         update_cache: yes
     - name: Install Rabbit MQ
